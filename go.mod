@@ -150,7 +150,7 @@ require (
 	github.com/open-feature/go-sdk-contrib/providers/ofrep v0.1.6 // @grafana/grafana-backend-group
 	github.com/openfga/api/proto v0.0.0-20250909172242-b4b2a12f5c67 // @grafana/identity-access-team
 	github.com/openfga/language/pkg/go v0.2.0-beta.2.0.20251027165255-0f8f255e5f6c // @grafana/identity-access-team
-	github.com/openfga/openfga v1.11.1 // @grafana/identity-access-team
+	github.com/openfga/openfga v1.11.2 // @grafana/identity-access-team
 	github.com/opentracing-contrib/go-grpc v0.1.1 // @grafana/grafana-search-and-storage
 	github.com/opentracing/opentracing-go v1.2.0 // @grafana/grafana-search-and-storage
 	github.com/openzipkin/zipkin-go v0.4.3 // @grafana/oss-big-tent
