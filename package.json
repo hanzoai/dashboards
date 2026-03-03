@@ -1,10 +1,14 @@
 {
-  "author": "Grafana Labs",
+  "author": "Hanzo AI <eng@hanzo.ai>",
   "license": "AGPL-3.0-only",
   "private": true,
-  "name": "grafana",
+  "name": "hanzo-dashboards",
   "version": "13.0.0-pre",
-  "repository": "github:grafana/grafana",
+  "homepage": "https://hanzo.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanzoai/dashboards.git"
+  },
   "scripts": {
     "check-frontend-dev": "./scripts/check-frontend-dev.sh",
     "build": "NODE_ENV=production nx exec --verbose -- webpack --config scripts/webpack/webpack.prod.js && pnpm run build:react19",

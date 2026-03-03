@@ -163,8 +163,9 @@ FROM ${JS_SRC} AS js-src
 # Final stage
 FROM ${BASE_IMAGE}
 
-LABEL maintainer="Grafana Labs <hello@grafana.com>"
-LABEL org.opencontainers.image.source="https://github.com/grafana/grafana"
+LABEL maintainer="Hanzo AI <eng@hanzo.ai>"
+LABEL org.opencontainers.image.source="https://github.com/hanzoai/dashboards"
+LABEL org.opencontainers.image.title="Hanzo Dashboards"
 
 ARG GF_UID="472"
 ARG GF_GID="0"
