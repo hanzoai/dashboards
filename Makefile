@@ -46,9 +46,9 @@ deps-js: node_modules ## Install frontend dependencies.
 deps: deps-js ## Install all dependencies.
 
 .PHONY: node_modules
-node_modules: package.json yarn.lock ## Install node modules.
+node_modules: package.json pnpm-lock.yaml ## Install node modules.
 	@echo "install frontend dependencies"
-	YARN_ENABLE_PROGRESS_BARS=false yarn install --immutable
+	pnpm install --frozen-lockfile
 
 ##@ Swagger
 SPEC_TARGET = public/api-spec.json
@@ -136,17 +136,17 @@ i18n-extract-enterprise:
 else
 i18n-extract-enterprise:
 	@echo "Extracting i18n strings for Enterprise"
-	cd public/locales/enterprise && LANG=en_US.UTF-8 yarn run i18next-cli extract --sync-primary
+	cd public/locales/enterprise && LANG=en_US.UTF-8 pnpm run i18next-cli extract --sync-primary
 endif
 
 .PHONY: i18n-extract
 i18n-extract: i18n-extract-enterprise
 	@echo "Extracting i18n strings for OSS"
-	LANG=en_US.UTF-8 yarn run i18next-cli extract --sync-primary
+	LANG=en_US.UTF-8 pnpm run i18next-cli extract --sync-primary
 	@echo "Extracting i18n strings for packages"
-	LANG=en_US.UTF-8 yarn run packages:i18n-extract
+	LANG=en_US.UTF-8 pnpm run packages:i18n-extract
 	@echo "Extracting i18n strings for plugins"
-	LANG=en_US.UTF-8 yarn run plugin:i18n-extract
+	LANG=en_US.UTF-8 pnpm run plugin:i18n-extract
 
 ##@ Building
 .PHONY: gen-cue
@@ -300,7 +300,7 @@ build-cli: ## Build Grafana CLI application.
 .PHONY: build-js
 build-js: ## Build frontend assets.
 	@echo "build frontend"
-	yarn run build
+	pnpm run build
 
 PLUGIN_ID ?=
 
@@ -328,7 +328,7 @@ run-go: ## Build and run web server immediately.
 
 .PHONY: run-frontend
 run-frontend: deps-js ## Fetch js dependencies and watch frontend for rebuild
-	yarn start
+	pnpm start
 
 .PHONY: run-bra
 run-bra: ## [Deprecated] Build and run web server on filesystem changes. See /.bra.toml for configuration.
@@ -414,7 +414,7 @@ test-go-integration-memcached: ## Run integration tests for memcached cache.
 .PHONY: test-js
 test-js: ## Run tests for frontend.
 	@echo "test frontend"
-	yarn test
+	pnpm test
 
 .PHONY: test
 test: test-go test-js ## Run all tests.

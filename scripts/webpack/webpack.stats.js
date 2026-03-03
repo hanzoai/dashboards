@@ -7,7 +7,7 @@ const prodConfig = require('./webpack.prod.js');
 module.exports = (env = {}) => {
   const config = { plugins: [new BundleAnalyzerPlugin()] };
 
-  // yarn build:stats --env doctor
+  // pnpm run build:stats --env doctor
   if (env.doctor) {
     config.plugins.push(
       new RsdoctorWebpackPlugin({
@@ -20,7 +20,7 @@ module.exports = (env = {}) => {
   }
 
   // disable hashing in output filenames to make them easier to identify
-  // yarn build:stats --env doctor --env namedChunks
+  // pnpm run build:stats --env doctor --env namedChunks
   if (env.namedChunks) {
     config.optimization = {
       chunkIds: 'named',

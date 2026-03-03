@@ -18,12 +18,8 @@ tsconfig.tsbuildinfo
 __debug_bin*
 *.cov
 
-# yarn
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+# pnpm
+.pnpm-store/
 
 # Enterprise emails
 /emails/templates/enterprise_*
@@ -159,10 +155,10 @@ pkg/services/quota/quotaimpl/storage/storage.json
 
 /scripts/build/release_publisher/release_publisher
 *.patch
-!.yarn/patches/*.patch
+!patches/*.patch
 
 # Ignoring frontend packages specifics
-/packages/grafana-ui/.yarn/.cache
+/packages/grafana-ui/.cache
 /packages/grafana-ui/.storybook/static
 /packages/grafana-ui/unstable
 /packages/grafana-flamegraph/.storybook/static
@@ -181,7 +177,7 @@ manifest-react19.json
 # Ignore go local build dependencies
 /scripts/go/bin/**
 
-# Ignore compilation stats from `yarn stats`
+# Ignore compilation stats from `pnpm run stats`
 compilation-stats.json
 
 # e2e tests
