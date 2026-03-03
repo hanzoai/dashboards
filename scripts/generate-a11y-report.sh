@@ -33,7 +33,7 @@ fi
 HOST=host.docker.internal docker run --add-host host.docker.internal:host-gateway -e HOST -v "$PWD":/grafana grafana/docker-puppeteer:1.1.0 pa11y-ci --config /grafana/.pa11yci.conf.js --json > pa11y-ci-results.json
 
 # Generate HTML report
-yarn dlx pa11y-ci-reporter-html@3.0.1 pa11y-ci-reporter-html
+pnpm dlx pa11y-ci-reporter-html@3.0.1 pa11y-ci-reporter-html
 
 # Start local server
-yarn http-server pa11y-ci-report -p 1234
+pnpm exec http-server pa11y-ci-report -p 1234

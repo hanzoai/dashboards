@@ -114,7 +114,7 @@ func runAction(ctx context.Context, c *cli.Command) error {
 		args = append(args, "--json")
 	}
 	//nolint:gosec
-	cmd := exec.CommandContext(ctx, "yarn", args...)
+	cmd := exec.CommandContext(ctx, "pnpm", args...)
 	cmd.Dir = repoRoot
 	cmd.Env = os.Environ()
 	cmd.Env = append(cmd.Env,

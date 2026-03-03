@@ -161,7 +161,7 @@ function join () {
 
 export TZ="Pacific/Honolulu"
 
-yarn run $CMD --env "$(join env)" \
+pnpm run $CMD --env "$(join env)" \
   --config "$(join cypressConfig)" \
   $PARAMS
 

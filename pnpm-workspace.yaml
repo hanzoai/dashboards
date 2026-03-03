@@ -1,0 +1,4 @@
+packages:
+  - "packages/*"
+  - "public/app/plugins/*/*"
+  - "e2e-playwright/test-plugins/*"
