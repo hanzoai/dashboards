@@ -232,7 +232,7 @@ func runAction(ctx context.Context, c *cli.Command) error {
 		"--browser", c.String("browser")}
 	args = append(args, c.StringSlice("parameters")...)
 	//nolint:gosec
-	cmd := exec.CommandContext(ctx, "yarn", args...)
+	cmd := exec.CommandContext(ctx, "pnpm", args...)
 	cmd.Dir = repoRoot
 	cmd.Env = os.Environ()
 	cmd.Env = append(cmd.Env, fmt.Sprintf("TZ=%s", c.String("timezone")))
