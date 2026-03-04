@@ -67,7 +67,7 @@ require (
 	github.com/go-ldap/ldap/v3 v3.4.4 // @grafana/identity-access-team
 	github.com/go-logfmt/logfmt v0.6.1 // @grafana/oss-big-tent
 	github.com/go-openapi/loads v0.23.2 // @grafana/alerting-backend
-	github.com/go-openapi/runtime v0.28.0 // @grafana/alerting-backend
+	github.com/go-openapi/runtime v0.29.2 // @grafana/alerting-backend
 	github.com/go-openapi/strfmt v0.25.0 // @grafana/alerting-backend
 	github.com/go-redis/redis/v8 v8.11.5 // indirect; @grafana/grafana-backend-group
 	github.com/go-sourcemap/sourcemap v2.1.4+incompatible // @grafana/grafana-backend-group
