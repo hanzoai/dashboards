@@ -66,6 +66,8 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            JS_YARN_INSTALL_FLAG=
           outputs: type=image,"name=${{ env.GHCR_IMAGE }}",push-by-digest=true,name-canonical=true,push=true
           cache-from: type=gha,scope=dashboards-${{ steps.slug.outputs.pair }}
           cache-to: type=gha,mode=max,scope=dashboards-${{ steps.slug.outputs.pair }}
