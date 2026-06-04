@@ -1,6 +1,6 @@
 module github.com/grafana/grafana/pkg/storage/unified/resource/kv
 
-go 1.25.7
+go 1.26.0
 
 require (
 	github.com/dgraph-io/badger/v4 v4.9.1
@@ -24,6 +24,6 @@ require (
 	go.opentelemetry.io/otel/trace v1.43.0 // indirect
 	golang.org/x/net v0.53.0 // indirect
 	golang.org/x/sys v0.43.0 // indirect
-	google.golang.org/protobuf v1.36.11 // indirect
+	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

@@ -220,19 +220,19 @@ require (
 	gonum.org/v1/gonum v0.17.0 // @grafana/oss-big-tent
 	google.golang.org/api v0.256.0 // @grafana/grafana-backend-group
 	google.golang.org/grpc v1.81.0 // @grafana/plugins-platform-backend
-	google.golang.org/protobuf v1.36.11 // @grafana/plugins-platform-backend
+	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af // @grafana/plugins-platform-backend
 	gopkg.in/ini.v1 v1.67.1 // @grafana/alerting-backend
 	gopkg.in/mail.v2 v2.3.1 // @grafana/grafana-backend-group
-	k8s.io/api v0.35.3 // @grafana/grafana-app-platform-squad
-	k8s.io/apiextensions-apiserver v0.35.3 // @grafana/grafana-app-platform-squad
-	k8s.io/apimachinery v0.35.3 // @grafana/grafana-app-platform-squad
-	k8s.io/apiserver v0.35.3 // @grafana/grafana-app-platform-squad
-	k8s.io/client-go v0.35.3 // @grafana/grafana-app-platform-squad
-	k8s.io/component-base v0.35.3 // @grafana/grafana-app-platform-squad
+	k8s.io/api v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/apiextensions-apiserver v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/apimachinery v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/apiserver v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/client-go v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/component-base v0.36.1 // @grafana/grafana-app-platform-squad
 	k8s.io/klog/v2 v2.140.0 // @grafana/grafana-app-platform-squad
-	k8s.io/kube-aggregator v0.35.0 // @grafana/grafana-app-platform-squad
-	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4 // @grafana/grafana-app-platform-squad
-	k8s.io/utils v0.0.0-20251002143259-bc988d571ff4 // @grafana/partner-datasources
+	k8s.io/kube-aggregator v0.36.1 // @grafana/grafana-app-platform-squad
+	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a // @grafana/grafana-app-platform-squad
+	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2 // @grafana/partner-datasources
 	modernc.org/sqlite v1.46.1 // @grafana/grafana-backend-group
 	pgregory.net/rapid v1.2.0 // @grafana/grafana-operator-experience-squad
 	sigs.k8s.io/randfill v1.0.0 // @grafana/grafana-app-platform-squad
@@ -419,7 +419,7 @@ require (
 	github.com/containerd/log v0.1.0 // indirect
 	github.com/containerd/platforms v0.2.1 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
-	github.com/coreos/go-systemd/v22 v22.6.0 // indirect
+	github.com/coreos/go-systemd/v22 v22.7.0 // indirect
 	github.com/cpuguy83/dockercfg v0.3.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
@@ -488,7 +488,6 @@ require (
 	github.com/grafana/jsonparser v0.0.0-20240425183733-ea80629e1a32 // indirect
 	github.com/grafana/regexp v0.0.0-20240518133315-a468a5bfb3bc // indirect
 	github.com/grafana/sqlds/v5 v5.0.4 // indirect
-	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.1-0.20191002090509-6af20e3a5340 // indirect
 	github.com/hashicorp/consul/api v1.31.2 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
@@ -566,7 +565,7 @@ require (
 	github.com/moby/docker-image-spec v1.3.1 // indirect
 	github.com/moby/go-archive v0.1.0 // indirect
 	github.com/moby/patternmatcher v0.6.0 // indirect
-	github.com/moby/spdystream v0.5.0 // indirect
+	github.com/moby/spdystream v0.5.1 // indirect
 	github.com/moby/sys/sequential v0.6.0 // indirect
 	github.com/moby/sys/user v0.4.0 // indirect
 	github.com/moby/sys/userns v0.1.0 // indirect
@@ -653,9 +652,9 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	github.com/zclconf/go-cty v1.16.3 // indirect
 	github.com/zeebo/xxh3 v1.1.0 // indirect
-	go.etcd.io/etcd/api/v3 v3.6.7 // indirect
-	go.etcd.io/etcd/client/pkg/v3 v3.6.7 // indirect
-	go.etcd.io/etcd/client/v3 v3.6.7 // indirect
+	go.etcd.io/etcd/api/v3 v3.6.8 // indirect
+	go.etcd.io/etcd/client/pkg/v3 v3.6.8 // indirect
+	go.etcd.io/etcd/client/v3 v3.6.8 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/collector/featuregate v1.58.0 // indirect
 	go.opentelemetry.io/collector/semconv v0.124.0 // indirect
@@ -692,7 +691,7 @@ require (
 	gopkg.in/telebot.v3 v3.3.8 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/kms v0.35.3 // indirect
+	k8s.io/kms v0.36.1 // indirect
 	modernc.org/libc v1.67.6 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
@@ -701,7 +700,10 @@ require (
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
 
-require filippo.io/hpke v0.4.0 // indirect
+require (
+	filippo.io/hpke v0.4.0 // indirect
+	k8s.io/streaming v0.36.1 // indirect
+)
 
 replace (
 	// Use fork of crewjam/saml with fixes for some issues until changes get merged into upstream
