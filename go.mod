@@ -151,7 +151,7 @@ require (
 	github.com/openfga/api/proto v0.0.0-20260122164422-25e22cb1875b // @grafana/identity-access-team
 	github.com/openfga/language/pkg/go v0.2.0-beta.2.0.20251027165255-0f8f255e5f6c // @grafana/identity-access-team
 	github.com/openfga/openfga v1.11.3 // @grafana/identity-access-team
-	github.com/opentracing-contrib/go-grpc v0.1.2 // @grafana/grafana-search-and-storage
+	github.com/opentracing-contrib/go-grpc v0.1.3 // @grafana/grafana-search-and-storage
 	github.com/opentracing/opentracing-go v1.2.0 // @grafana/grafana-search-and-storage
 	github.com/openzipkin/zipkin-go v0.4.3 // @grafana/oss-big-tent
 	github.com/patrickmn/go-cache v2.1.0+incompatible // @grafana/alerting-backend
