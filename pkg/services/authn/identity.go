@@ -74,6 +74,8 @@ type Identity struct {
 	ClientParams ClientParams
 	// Permissions is the list of permissions the entity has.
 	Permissions map[int64]map[string][]string
+	// AccessToken is the access token that went into authenticating this identity. Empty for legacy auth and in-process identities.
+	AccessToken string
 	// IDToken is a signed token representing the identity that can be forwarded to plugins and external services.
 	IDToken string
 	// ExternalUID is the unique identifier for the entity in the external system.
@@ -193,6 +195,10 @@ func (i *Identity) GetCacheKey() string {
 
 func (i *Identity) GetEmail() string {
 	return i.Email
+}
+
+func (i *Identity) GetAccessToken() string {
+	return i.AccessToken
 }
 
 func (i *Identity) GetIDToken() string {

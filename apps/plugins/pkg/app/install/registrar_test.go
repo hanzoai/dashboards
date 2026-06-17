@@ -284,6 +284,20 @@ func (f *fakeClientGenerator) ClientFor(resource.Kind) (resource.Client, error) 
 	return &fakeResourceClient{client: f.client}, nil
 }
 
+func (f *fakeClientGenerator) GetCustomRouteClient(schema.GroupVersion, string) (resource.CustomRouteClient, error) {
+	if f.shouldError {
+		return nil, errors.New("client generation failed")
+	}
+	return nil, nil
+}
+
+func (f *fakeClientGenerator) DiscoveryClient() (resource.DiscoveryClient, error) {
+	if f.shouldError {
+		return nil, errors.New("client generation failed")
+	}
+	return nil, nil
+}
+
 type fakeResourceClient struct {
 	client *fakePluginInstallClient
 }

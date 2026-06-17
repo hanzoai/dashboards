@@ -44,6 +44,8 @@ type SignedInUser struct {
 	// Permissions grouped by orgID and actions
 	Permissions map[int64]map[string][]string `json:"-"`
 
+	// AccessToken is the access token that went into authenticating this identity. Empty for legacy auth and in-process identities.
+	AccessToken string `json:"-" xorm:"-"`
 	// IDToken is a signed token representing the identity that can be forwarded to plugins and external services.
 	IDToken           string                                       `json:"-" xorm:"-"`
 	IDTokenClaims     *authnlib.Claims[authnlib.IDTokenClaims]     `json:"-" xorm:"-"`
@@ -321,6 +323,11 @@ func (u *SignedInUser) IsAuthenticatedBy(providers ...string) bool {
 // FIXME: remove this method once all services are using an interface
 func (u *SignedInUser) IsNil() bool {
 	return u == nil
+}
+
+// GetAccessToken implements identity.Requester. Returns the access token used to authenticate; empty for legacy auth and in-process identities.
+func (u *SignedInUser) GetAccessToken() string {
+	return u.AccessToken
 }
 
 func (u *SignedInUser) GetIDToken() string {
