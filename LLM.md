@@ -1,4 +1,4 @@
-# LLM.md - Hanzo Dashboards
+# Hanzo Dashboards
 
 ## Overview
 Observability and monitoring dashboards for the Hanzo platform. Based on Grafana.
