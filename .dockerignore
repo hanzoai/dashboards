@@ -1,0 +1,9 @@
+/dashboards
+/probe
+/base_/
+/data/
+/vaults/
+*.db
+*.db-shm
+*.db-wal
+.git
