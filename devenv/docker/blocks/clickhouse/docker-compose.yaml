@@ -1,5 +1,5 @@
   clickhouse:
-    image: clickhouse/clickhouse-server:latest
+    image: ghcr.io/hanzoai/datastore:26.6.1.1
     container_name: clickhouse
     ports:
       - "8123:8123"
