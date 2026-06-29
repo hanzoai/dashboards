@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="dashboards" width="880"></p>
+
 # Hanzo Dashboards
 
 Observability and monitoring dashboards for the Hanzo platform. Based on Grafana.
