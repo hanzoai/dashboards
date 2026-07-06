@@ -6446,8 +6446,7 @@
           "format": "int64"
         },
         "last_applied": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "template_file_provenances": {
           "type": "object",
@@ -6547,8 +6546,7 @@
         },
         "uptime": {
           "description": "uptime",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "versionInfo": {
           "$ref": "#/definitions/versionInfo"
@@ -6861,8 +6859,7 @@
       "properties": {
         "lastNotifyAttempt": {
           "description": "A timestamp indicating the last attempt to deliver a notification regardless of the outcome.\nFormat: date-time",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "lastNotifyAttemptDuration": {
           "description": "Duration of the last attempt to deliver a notification in humanized format (`1s` or `15ms`, etc).",
@@ -9869,8 +9866,7 @@
       "properties": {
         "generatorURL": {
           "description": "generator URL\nFormat: uri",
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "labels": {
           "$ref": "#/definitions/labelSet"
@@ -9972,8 +9968,7 @@
         },
         "uptime": {
           "description": "uptime",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "versionInfo": {
           "$ref": "#/definitions/versionInfo"
@@ -10026,8 +10021,7 @@
         },
         "endsAt": {
           "description": "ends at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "fingerprint": {
           "description": "fingerprint",
@@ -10035,8 +10029,7 @@
         },
         "generatorURL": {
           "description": "generator URL\nFormat: uri",
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "labels": {
           "$ref": "#/definitions/labelSet"
@@ -10050,16 +10043,14 @@
         },
         "startsAt": {
           "description": "starts at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "status": {
           "$ref": "#/definitions/alertStatus"
         },
         "updatedAt": {
           "description": "updated at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
@@ -10105,8 +10096,7 @@
         },
         "endsAt": {
           "description": "ends at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "id": {
           "description": "id",
@@ -10120,16 +10110,14 @@
         },
         "startsAt": {
           "description": "starts at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "status": {
           "$ref": "#/definitions/silenceStatus"
         },
         "updatedAt": {
           "description": "updated at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
@@ -10163,8 +10151,7 @@
         },
         "endsAt": {
           "description": "ends at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "id": {
           "description": "id",
@@ -10175,16 +10162,14 @@
         },
         "startsAt": {
           "description": "starts at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "status": {
           "$ref": "#/definitions/silenceStatus"
         },
         "updatedAt": {
           "description": "updated at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
@@ -10276,21 +10261,18 @@
         },
         "endsAt": {
           "description": "ends at\nFormat: date-time",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "generatorURL": {
           "description": "generator URL\nFormat: uri",
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "labels": {
           "$ref": "#/definitions/labelSet"
         },
         "startsAt": {
           "description": "starts at\nFormat: date-time",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
@@ -10322,8 +10304,7 @@
         },
         "endsAt": {
           "description": "ends at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "id": {
           "description": "id",
@@ -10334,8 +10315,7 @@
         },
         "startsAt": {
           "description": "starts at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },
@@ -10373,16 +10353,14 @@
         },
         "endsAt": {
           "description": "ends at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "matchers": {
           "$ref": "#/definitions/matchers"
         },
         "startsAt": {
           "description": "starts at",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     },

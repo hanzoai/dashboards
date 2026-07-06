@@ -1789,7 +1789,6 @@
      "type": "integer"
     },
     "last_applied": {
-     "format": "date-time",
      "type": "string"
     },
     "template_file_provenances": {
@@ -1884,7 +1883,6 @@
     },
     "uptime": {
      "description": "uptime",
-     "format": "date-time",
      "type": "string"
     },
     "versionInfo": {
@@ -2204,7 +2202,6 @@
    "properties": {
     "lastNotifyAttempt": {
      "description": "A timestamp indicating the last attempt to deliver a notification regardless of the outcome.\nFormat: date-time",
-     "format": "date-time",
      "type": "string"
     },
     "lastNotifyAttemptDuration": {
@@ -4944,6 +4941,7 @@
    "type": "object"
   },
   "URL": {
+   "description": "The general form represented is:\n\n[scheme:][//[userinfo@]host][/]path[?query][#fragment]\n\nURLs that do not start with a slash after the scheme are interpreted as:\n\nscheme:opaque[?query][#fragment]\n\nThe Host field contains the host and port subcomponents of the URL.\nWhen the port is present, it is separated from the host with a colon.\nWhen the host is an IPv6 address, it must be enclosed in square brackets:\n\"[fe80::1]:80\". The [net.JoinHostPort] function combines a host and port\ninto a string suitable for the Host field, adding square brackets to\nthe host when necessary.\n\nNote that the Path field is stored in decoded form: /%47%6f%2f becomes /Go/.\nA consequence is that it is impossible to tell which slashes in the Path were\nslashes in the raw URL and which were %2f. This distinction is rarely important,\nbut when it is, the code should use the [URL.EscapedPath] method, which preserves\nthe original encoding of Path. The Fragment field is also stored in decoded form,\nuse [URL.EscapedFragment] to retrieve the original encoding.\n\nThe [URL.String] method uses the [URL.EscapedPath] method to obtain the path.",
    "properties": {
     "ForceQuery": {
      "description": "ForceQuery indicates whether the original URL contained a query ('?') character.\nWhen set, the String method will include a trailing '?', even when RawQuery is empty.",
@@ -4984,7 +4982,7 @@
      "$ref": "#/definitions/Userinfo"
     }
    },
-   "title": "URL is a custom URL type that allows validation at configuration load time.",
+   "title": "A URL represents a parsed URL (technically, a URI reference).",
    "type": "object"
   },
   "UpdateNamespaceRulesRequest": {
@@ -5208,7 +5206,6 @@
    "properties": {
     "generatorURL": {
      "description": "generator URL\nFormat: uri",
-     "format": "uri",
      "type": "string"
     },
     "labels": {
@@ -5308,7 +5305,6 @@
     },
     "uptime": {
      "description": "uptime",
-     "format": "date-time",
      "type": "string"
     },
     "versionInfo": {
@@ -5358,7 +5354,6 @@
     },
     "endsAt": {
      "description": "ends at",
-     "format": "date-time",
      "type": "string"
     },
     "fingerprint": {
@@ -5367,7 +5362,6 @@
     },
     "generatorURL": {
      "description": "generator URL\nFormat: uri",
-     "format": "uri",
      "type": "string"
     },
     "labels": {
@@ -5382,7 +5376,6 @@
     },
     "startsAt": {
      "description": "starts at",
-     "format": "date-time",
      "type": "string"
     },
     "status": {
@@ -5390,7 +5383,6 @@
     },
     "updatedAt": {
      "description": "updated at",
-     "format": "date-time",
      "type": "string"
     }
    },
@@ -5437,7 +5429,6 @@
     },
     "endsAt": {
      "description": "ends at",
-     "format": "date-time",
      "type": "string"
     },
     "id": {
@@ -5452,7 +5443,6 @@
     },
     "startsAt": {
      "description": "starts at",
-     "format": "date-time",
      "type": "string"
     },
     "status": {
@@ -5460,7 +5450,6 @@
     },
     "updatedAt": {
      "description": "updated at",
-     "format": "date-time",
      "type": "string"
     }
    },
@@ -5495,7 +5484,6 @@
     },
     "endsAt": {
      "description": "ends at",
-     "format": "date-time",
      "type": "string"
     },
     "id": {
@@ -5507,7 +5495,6 @@
     },
     "startsAt": {
      "description": "starts at",
-     "format": "date-time",
      "type": "string"
     },
     "status": {
@@ -5515,7 +5502,6 @@
     },
     "updatedAt": {
      "description": "updated at",
-     "format": "date-time",
      "type": "string"
     }
    },
@@ -5615,12 +5601,10 @@
     },
     "endsAt": {
      "description": "ends at\nFormat: date-time",
-     "format": "date-time",
      "type": "string"
     },
     "generatorURL": {
      "description": "generator URL\nFormat: uri",
-     "format": "uri",
      "type": "string"
     },
     "labels": {
@@ -5628,7 +5612,6 @@
     },
     "startsAt": {
      "description": "starts at\nFormat: date-time",
-     "format": "date-time",
      "type": "string"
     }
    },
@@ -5657,7 +5640,6 @@
     },
     "endsAt": {
      "description": "ends at",
-     "format": "date-time",
      "type": "string"
     },
     "id": {
@@ -5669,7 +5651,6 @@
     },
     "startsAt": {
      "description": "starts at",
-     "format": "date-time",
      "type": "string"
     }
    },
@@ -5708,7 +5689,6 @@
     },
     "endsAt": {
      "description": "ends at",
-     "format": "date-time",
      "type": "string"
     },
     "matchers": {
@@ -5716,7 +5696,6 @@
     },
     "startsAt": {
      "description": "starts at",
-     "format": "date-time",
      "type": "string"
     }
    },
