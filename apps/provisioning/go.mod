@@ -1,6 +1,6 @@
 module github.com/grafana/grafana/apps/provisioning
 
-go 1.26.2
+go 1.26.3
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
@@ -10,7 +10,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/grafana/authlib/types v0.0.0-20260304161757-e152786a5bb4
 	github.com/grafana/grafana-app-sdk v0.56.0
-	github.com/grafana/grafana-app-sdk/logging v0.54.1
+	github.com/grafana/grafana-app-sdk/logging v0.56.4
 	github.com/grafana/grafana/apps/secret v0.0.0-20260118065639-60cb766a97d6
 	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20260118065639-60cb766a97d6
 	github.com/grafana/nanogit v0.3.5
