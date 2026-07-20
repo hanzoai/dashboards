@@ -1,6 +1,6 @@
 module github.com/grafana/grafana/apps/advisor
 
-go 1.26.2
+go 1.26.3
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0
@@ -8,15 +8,15 @@ require (
 	github.com/google/go-github/v82 v82.0.0
 	github.com/grafana/authlib/types v0.0.0-20260304161757-e152786a5bb4
 	github.com/grafana/grafana v0.0.0-00010101000000-000000000000
-	github.com/grafana/grafana-app-sdk v0.56.0
+	github.com/grafana/grafana-app-sdk v0.56.5
 	github.com/grafana/grafana-app-sdk/logging v0.54.1
 	github.com/grafana/grafana-plugin-sdk-go v0.291.1
 	github.com/grafana/grafana/pkg/apimachinery v0.0.0
 	github.com/grafana/grafana/pkg/plugins v0.0.0
 	github.com/stretchr/testify v1.11.1
-	k8s.io/apimachinery v0.36.1
-	k8s.io/apiserver v0.36.0
-	k8s.io/client-go v0.36.1
+	k8s.io/apimachinery v0.36.2
+	k8s.io/apiserver v0.36.2
+	k8s.io/client-go v0.36.2
 	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a
 )
 
@@ -318,7 +318,7 @@ require (
 	go.uber.org/zap v1.27.1 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/crypto v0.51.0 // indirect
+	golang.org/x/crypto v0.52.0 // indirect
 	golang.org/x/exp v0.0.0-20260112195511-716be5621a96 // indirect
 	golang.org/x/mod v0.35.0 // indirect
 	golang.org/x/net v0.55.0 // indirect
@@ -348,12 +348,12 @@ require (
 	gopkg.in/telebot.v3 v3.3.8 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/api v0.36.1 // indirect
-	k8s.io/apiextensions-apiserver v0.36.0 // indirect
-	k8s.io/component-base v0.36.0 // indirect
+	k8s.io/api v0.36.2 // indirect
+	k8s.io/apiextensions-apiserver v0.36.2 // indirect
+	k8s.io/component-base v0.36.2 // indirect
 	k8s.io/klog/v2 v2.140.0 // indirect
-	k8s.io/kms v0.36.0 // indirect
-	k8s.io/streaming v0.36.1 // indirect
+	k8s.io/kms v0.36.2 // indirect
+	k8s.io/streaming v0.36.2 // indirect
 	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2 // indirect
 	modernc.org/libc v1.67.6 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
