@@ -1,12 +1,12 @@
 module github.com/grafana/grafana/apps/dashboard
 
-go 1.26.2
+go 1.26.3
 
 require (
 	cuelang.org/go v0.11.1
 	github.com/grafana/authlib/types v0.0.0-20260304161757-e152786a5bb4
 	github.com/grafana/grafana-app-sdk v0.56.0
-	github.com/grafana/grafana-app-sdk/logging v0.54.1
+	github.com/grafana/grafana-app-sdk/logging v0.56.5
 	github.com/grafana/grafana-plugin-sdk-go v0.291.1
 	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20260118065639-60cb766a97d6
 	github.com/hashicorp/golang-lru/v2 v2.0.7
