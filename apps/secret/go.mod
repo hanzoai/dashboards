@@ -1,14 +1,14 @@
 module github.com/grafana/grafana/apps/secret
 
-go 1.26.2
+go 1.26.3
 
 require (
-	github.com/grafana/grafana-app-sdk v0.56.0
+	github.com/grafana/grafana-app-sdk v0.56.5
 	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20260118065639-60cb766a97d6
 	github.com/stretchr/testify v1.11.1
 	google.golang.org/grpc v1.81.0
 	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af
-	k8s.io/apimachinery v0.36.1
+	k8s.io/apimachinery v0.36.2
 	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a
 	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2
 )
@@ -65,16 +65,16 @@ require (
 	go.opentelemetry.io/otel/trace v1.44.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/net v0.53.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
-	golang.org/x/sys v0.43.0 // indirect
-	golang.org/x/term v0.42.0 // indirect
-	golang.org/x/text v0.36.0 // indirect
+	golang.org/x/sys v0.45.0 // indirect
+	golang.org/x/term v0.43.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	golang.org/x/time v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260406210006-6f92a3bedf2d // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/client-go v0.36.1 // indirect
+	k8s.io/client-go v0.36.2 // indirect
 	k8s.io/klog/v2 v2.140.0 // indirect
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
