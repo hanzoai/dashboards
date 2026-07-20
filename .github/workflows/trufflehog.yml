@@ -31,6 +31,6 @@ jobs:
           persist-credentials: false
           fetch-depth: ${{ steps.fetch_depth.outputs.fetch_depth }}
       - name: Trufflehog
-        uses: trufflesecurity/trufflehog@116e7171542d2f1dad8810f00dcfacbe0b809183 # v3.92.5
+        uses: trufflesecurity/trufflehog@27b0417c16317ca9a472a9a8092acce143b49c55 # v3.95.9
         with:
           extra_args: --results=verified
