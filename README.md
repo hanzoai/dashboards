@@ -1,4 +1,28 @@
-# dashboards
+# dashboards — FOLDED INTO hanzoai/observability
+
+> **This service no longer ships as its own binary.** Its whole surface — the
+> five tRPC routers below — now lives in
+> [`hanzoai/observability`](https://github.com/hanzoai/observability), served on
+> the same ZAP router (msgType **203**, port **9992**) as the traces /
+> observations / scores backbone, with the method ordinals preserved at **+200**
+> (allDashboards was @0, is now @200). Implementation is the `dash_*.go` file set
+> there; the schema is merged into `proto/observability.zap`.
+>
+> **Why:** a dashboard is a saved QUERY over exactly the traces, observations and
+> scores that service already owns, and both halves were blocked on the same
+> ClickHouse analytics shim. Kept apart, that shim had to be written twice
+> against two copies of one OLTP model, and `chart`/`scoreHistogram` could not
+> reach the scores they aggregate without a network hop. One service, one shim,
+> one capability gate.
+>
+> Do not build or deploy this repo. Open PRs against `hanzoai/observability`.
+> The history here is kept because the ordinals, the wire layout and the
+> per-category permission bits it established are still the live contract.
+
+---
+
+## Original README (historical)
+
 
 A Hanzo Base-native Go service binary in the console tRPC→ZAP migration. It
 replaces **five** in-process console tRPC routers — `dashboardRouter`,
