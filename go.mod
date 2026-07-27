@@ -1,6 +1,6 @@
 module github.com/hanzoai/dashboards
 
-go 1.26.4
+go 1.26.5
 
 require (
 	github.com/hanzoai/base v1.4.2
