@@ -16,6 +16,12 @@ FROM golang:1.26.4-alpine AS builder
 RUN apk add --no-cache git ca-certificates tzdata
 WORKDIR /build
 COPY go.mod go.sum ./
+# Resolve modules through the module proxy, never direct. A luxfi tag was
+# force-moved upstream, so github.com now serves different bytes than the
+# immutable proxy copy that go.sum records — fetching direct fails verification
+# with "SECURITY ERROR ... does NOT match an earlier download". The proxy is
+# also the reproducible source: it cannot change under us the way a moved tag can.
+ENV GOPROXY=https://proxy.golang.org,direct
 RUN --mount=type=cache,target=/go/pkg/mod go mod download
 COPY . .
 
