@@ -6,27 +6,24 @@
 # CI builds this multi-arch (linux/amd64 + linux/arm64) on the hanzoai
 # self-hosted runners → ghcr.io/hanzoai/dashboards. Do NOT build locally.
 #
-# NOTE on go.mod replaces: the working-copy go.mod carries `replace` directives
-# to ../base and ../../zap-proto/go for local dev while those modules' proxy
-# availability is flaky. CI builds against the PUBLISHED modules — the release
-# pipeline drops the replaces (the modules resolve via GOPROXY) so this build
-# context needs only this repo. If you must build with the replaces, use a
-# monorepo build context that includes the sibling modules.
+# go.mod carries NO `replace` directives: every dependency resolves to a
+# published version through GOPROXY, so this build context is just this repo.
+# Keep it that way — a replace pointing at a sibling checkout builds here and
+# nowhere else.
 FROM golang:1.26.4-alpine AS builder
 RUN apk add --no-cache git ca-certificates tzdata
 WORKDIR /build
 COPY go.mod go.sum ./
-# Resolve modules through the module proxy, never direct. A luxfi tag was
-# force-moved upstream, so github.com now serves different bytes than the
-# immutable proxy copy that go.sum records — fetching direct fails verification
-# with "SECURITY ERROR ... does NOT match an earlier download". The proxy is
-# also the reproducible source: it cannot change under us the way a moved tag can.
+# Resolve modules through the module proxy, never direct. proxy.golang.org and
+# sum.golang.org agree on every dependency here and neither can change under us;
+# github.com serves whatever a moved tag currently points at. Pinning the proxy
+# is what makes go.sum checkable against the checksum database at all.
 ENV GOPROXY=https://proxy.golang.org,direct
-# The cache mount is keyed by id. A luxfi tag was force-moved upstream, so a
-# cache populated before the move holds bytes that no longer verify against
-# go.sum and every later build fails with "SECURITY ERROR ... does NOT match an
-# earlier download" — while a clean machine builds fine. Bumping the id
-# abandons the poisoned cache instead of chasing the hash.
+# The cache mount is keyed by id. go.sum once recorded hashes copied off a
+# developer machine whose module cache predated an upstream tag move: this build
+# failed verification while that machine "confirmed" the wrong bytes from its own
+# cache. go.sum is corrected against proxy+sumdb; the id bump abandons any layer
+# cache populated while it was wrong.
 RUN --mount=type=cache,id=gomod-v2,target=/go/pkg/mod go mod download
 COPY . .
 
