@@ -22,7 +22,12 @@ COPY go.mod go.sum ./
 # with "SECURITY ERROR ... does NOT match an earlier download". The proxy is
 # also the reproducible source: it cannot change under us the way a moved tag can.
 ENV GOPROXY=https://proxy.golang.org,direct
-RUN --mount=type=cache,target=/go/pkg/mod go mod download
+# The cache mount is keyed by id. A luxfi tag was force-moved upstream, so a
+# cache populated before the move holds bytes that no longer verify against
+# go.sum and every later build fails with "SECURITY ERROR ... does NOT match an
+# earlier download" — while a clean machine builds fine. Bumping the id
+# abandons the poisoned cache instead of chasing the hash.
+RUN --mount=type=cache,id=gomod-v2,target=/go/pkg/mod go mod download
 COPY . .
 
 # JSON v2 per SCALE_STANDARD.md §2: error/results bodies serialize via
