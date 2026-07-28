@@ -10,7 +10,7 @@
 # published version through GOPROXY, so this build context is just this repo.
 # Keep it that way — a replace pointing at a sibling checkout builds here and
 # nowhere else.
-FROM golang:1.26.4-alpine AS builder
+FROM golang:1.26.5-alpine AS builder
 RUN apk add --no-cache git ca-certificates tzdata
 WORKDIR /build
 COPY go.mod go.sum ./
