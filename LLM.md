@@ -1,4 +1,10 @@
-# CLAUDE.md — contract for AI helpers
+# LLM.md — contract for AI helpers
+
+> **Folded into [`hanzoai/observability`](https://github.com/hanzoai/observability).**
+> Do not build or deploy this repo; open PRs against that one. The surface below
+> is served there on msgType **203** with the ordinals preserved at **+200**,
+> implemented in its `dash_*.go` file set. What follows describes the code in
+> THIS repo, whose wire layout and permission bits are still the live contract.
 
 A Hanzo Base-native Go service in the console tRPC→ZAP migration. It replaces
 five tRPC routers (dashboards + widgets + tables + view-presets + monitors) with
