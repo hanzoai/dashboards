@@ -40,16 +40,18 @@ RUN --mount=type=cache,target=/go/pkg/mod \
     -ldflags="-s -w" \
     -o /build/dashboards .
 
-FROM alpine:3.21
-RUN apk add --no-cache ca-certificates tzdata curl \
-    && addgroup -S hanzo && adduser -S hanzo -G hanzo
-WORKDIR /app
+# One directory in an empty image: the static binary and the files it reads;
+# nothing else is present to run, so nothing else can be run.
+FROM alpine:3.22 AS root
+RUN apk add --no-cache ca-certificates tzdata && mkdir -p /data /vaults && chown -R 65532:65532 /data /vaults
+
+FROM scratch
+COPY --from=root /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY --from=root /usr/share/zoneinfo /usr/share/zoneinfo
+COPY --from=root --chown=65532:65532 /data /data
+COPY --from=root --chown=65532:65532 /vaults /vaults
 COPY --from=builder /build/dashboards /app/dashboards
-RUN mkdir -p /data /vaults && chown -R hanzo:hanzo /app /data /vaults
-USER hanzo
-# 8090 = Base sidecar HTTP (health/metrics); 9995 = typed ZAP capability RPC.
+USER 65532:65532
 EXPOSE 8090 9995
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8090/healthz || exit 1
 ENTRYPOINT ["/app/dashboards"]
 CMD ["serve", "--http=0.0.0.0:8090", "--zap=0.0.0.0:9995", "--dir=/data", "--vaultDir=/vaults"]
