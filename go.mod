@@ -3,7 +3,7 @@ module github.com/hanzoai/dashboards
 go 1.26.5
 
 require (
-	github.com/hanzoai/base v1.4.7
+	github.com/hanzoai/base v1.4.5
 	github.com/hanzoai/dbx v1.17.2
 	github.com/luxfi/log v1.4.3
 	github.com/luxfi/zap v1.2.6
@@ -86,7 +86,7 @@ require (
 	github.com/luxfi/cache v1.3.1 // indirect
 	github.com/luxfi/compress v0.1.1 // indirect
 	github.com/luxfi/concurrent v0.1.1 // indirect
-	github.com/luxfi/consensus v1.36.2 // indirect
+	github.com/luxfi/consensus v1.36.3 // indirect
 	github.com/luxfi/constants v1.6.2 // indirect
 	github.com/luxfi/container v0.2.1 // indirect
 	github.com/luxfi/corona v0.10.4 // indirect
